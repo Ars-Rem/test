@@ -8,12 +8,7 @@ pipeline {
             }
         }
         
-        stage("1_stage") {
-            steps {
-                echo "Start 1 stage"
-                echo "Building..."
-                echo "Stop.."
-            }
+       
         stage("copy") {
             steps {
                 echo "Start copy"
