@@ -11,6 +11,7 @@ pipeline {
         stage("1_stage") {
             steps {
                 echo "Start 1 stage"
+                sh "cd /var"
                 echo "Building..."
                 echo "Stop.."
             }
