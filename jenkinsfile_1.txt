@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo "Start compile"
                 echo "Building..."
-                sh "cd /var/lib/jenkins/workspace/test"
+                sh "npm install"
                 sh "npm run build"
                 echo "Stop.."
               }
@@ -21,9 +21,7 @@ pipeline {
         stage("send") {
            steps {
                 echo "Start send"
-                sh "scp -r test@192.168.3.236:/var/lib/jenkins/workspace/test/build test2@192.168.3.233:/var/www/html"
-                sh "cd /var/www/html/build"
-                sh "npm start"
+                sh "scp -r test@192.168.3.236:/var/lib/jenkins/workspace/test/build/* test2@192.168.3.233:/var/www/html"
                 echo "Stop.."
             }
         }   
