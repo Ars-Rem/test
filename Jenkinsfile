@@ -3,7 +3,7 @@ pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr:'3'))
         timeout(time: 30, unit: 'MINUTES')
-//        ansiColor('gnome-terminal')
+        ansiColor('gnome-terminal')
     }
     stages {
         stage ('Build') {
