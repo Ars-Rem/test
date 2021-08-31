@@ -17,10 +17,9 @@ pipeline {
             stage("copy") {
             steps {
                 echo "Start copy"
-                sh "cd /var/lib/jenkins/workspace/test"
-                sh "ll"
-                echo "Stop.."
                 
+                echo "Stop.."
+
               }
             }
         }
