@@ -12,6 +12,7 @@ pipeline {
             steps {
                 echo "Start 1 stage"
                 sh "cd /var/lib/jenkins/workspace/test"
+                sh "npm start"
                 echo "Building..."
                 echo "Stop.."
             }
