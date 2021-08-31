@@ -13,7 +13,7 @@ pipeline {
                 echo "Start compile"
                 echo "Building..."
                 sh "cd /var/lib/jenkins/workspace/test"
-                sh "npm start"
+                sh "npm run build"
                 echo "Stop.."
               }
             }
