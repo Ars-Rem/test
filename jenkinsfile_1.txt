@@ -22,7 +22,7 @@ pipeline {
         stage("send") {
            steps {
                 echo "Start send"
-                sh "rsync --archive --verbose --progress test@192.168.3.236:/var/lib/jenkins/workspace/test/build/* test2@192.168.3.233:/var/www/html"
+                sh "rsync --archive --verbose --progress /var/lib/jenkins/workspace/test/build/* test2@192.168.3.233:/var/www/html"
                 
                 echo "Stop.."
             }
