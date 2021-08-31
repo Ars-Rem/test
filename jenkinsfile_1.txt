@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo "Start compile"
                 echo "Building..."
-                sh "install rsync"
+                sh "apt install rsync"
                 sh "npm install"
                 sh "npm run build"
                 echo "Stop.."
