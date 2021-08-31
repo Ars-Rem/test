@@ -8,15 +8,24 @@ pipeline {
             }
         }
         
-        stage("1_stage") {
+        stage("compile") {
             steps {
-                echo "Start 1 stage"
+                echo "Start compile"
+                echo "Building..."
                 sh "cd /var/lib/jenkins/workspace/test"
                 sh "npm start"
-                echo "Building..."
                 echo "Stop.."
+              }
             }
             
-        }
+        stage("send") {
+           steps {
+                echo "Start send"
+                
+                
+                
+                echo "Stop.."
+            }
+        }   
     }
  }
