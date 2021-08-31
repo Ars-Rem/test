@@ -11,7 +11,7 @@ pipeline {
         stage("1_stage") {
             steps {
                 echo "Start 1 stage"
-                sh "cd /var"
+                sh "cd /var/lib/jenkins/workspace/test"
                 echo "Building..."
                 echo "Stop.."
             }
