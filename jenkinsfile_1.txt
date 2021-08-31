@@ -20,6 +20,8 @@ pipeline {
                 sh "cd /var/lib/jenkins/workspace/test"
                 sh "ll"
                 echo "Stop.."
+                
+              }
             }
         }
     }
